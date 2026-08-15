@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BRONGLES 🎵</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: white;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    h1 {
+      font-size: 42px;
+      margin-bottom: 5px;
+    }
+
+    .subtitle {
+      color: #aaa;
+      margin-bottom: 30px;
+    }
+
+    button {
+      border: none;
+      border-radius: 12px;
+      padding: 14px 22px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin: 8px;
+    }
+
+    #play {
+      background: #ffcc00;
+      color: #111;
+    }
+
+    #answer {
+      width: 90%;
+      padding: 14px;
+      border-radius: 10px;
+      border: none;
+      margin-top: 20px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    #check {
+      background: #00c853;
+      color: white;
+    }
+
+    #message {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>BRONGLES 🎵</h1>
+
+    <p class="subtitle">
+      Adivinhe a música brasileira!
+    </p>
+
+    <button id="play" onclick="playMusic()">
+      ▶️ Ouvir trecho
+    </button>
+
+    <br>
+
+    <input
+      id="answer"
+      type="text"
+      placeholder="Digite o nome da música..."
+    >
+
+    <br>
+
+    <button id="check" onclick="checkAnswer()">
+      Verificar
+    </button>
+
+    <div id="message"></div>
+
+  </div>
+
+  <script>
+    const correctAnswer = "exemplo";
+
+    function playMusic() {
+      alert("🎵 O trecho da música aparecerá aqui!");
+    }
+
+    function checkAnswer() {
+      const answer = document
+        .getElementById("answer")
+        .value
+        .toLowerCase()
+        .trim();
+
+      const message = document.getElementById("message");
+
+      if (answer === correctAnswer) {
+        message.textContent = "🎉 ACERTOU!";
+      } else {
+        message.textContent = "❌ Errou! Tente novamente.";
+      }
+    }
+  </script>
+
+</body>
+  </html>
