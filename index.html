@@ -103,9 +103,12 @@
   <script>
     const correctAnswer = "exemplo";
 
-    function playMusic() {
-      alert("🎵 O trecho da música aparecerá aqui!");
-    }
+  const audio = new Audio("Marília Mendonça - Foi Por Conveniência (Não Foi Por Amor) (Vídeo Oficial)(MP3_160K).mp3");
+
+function playMusic() {
+  audio.play();
+}
+    
 
     function checkAnswer() {
       const answer = document
